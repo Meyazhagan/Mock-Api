@@ -32,7 +32,7 @@ function createCard({ id, avatar, name, createdAt }) {
           createdAt
         ).toDateString()}</div>
         <div class="button">
-        <a onclick="editUser(${id},'${name}','${avatar}')" href="#add-btn"><button class="btn">Edit</button></a>
+        <a href="#add-btn"><button class="btn" onclick="editUser(${id},'${name}','${avatar}')">Edit</button></a>
         <button class="red-btn btn" onclick="deleteUser(${id})">Delete</button>
         </div>
       </div>
@@ -52,7 +52,6 @@ editform.addEventListener("submit", (e) => {
   let name = editform.querySelector("#user-name").value;
   let avatar = editform.querySelector("#avatar-url").value;
   let id = editform.querySelector("#id").value;
-  location.replace(editform);
   updateUser(id, name, avatar);
 });
 
