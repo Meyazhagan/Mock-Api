@@ -1,0 +1,118 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+      27deg,
+      rgba(34, 193, 195, 1) 0%,
+      rgba(253, 187, 45, 1) 100%
+    )
+    repeat center;
+  background-attachment: fixed;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.user-container {
+  width: fit-content;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(50px);
+}
+.user-container:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.5);
+}
+.avatar {
+  width: 5rem;
+  height: max-content;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.profile-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+  justify-self: center;
+  align-self: center;
+}
+.name,
+.createAt {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3c3a3a;
+}
+.createAt {
+  font-weight: 400;
+}
+
+.btn {
+  width: max-content;
+  margin: 0 5px;
+  padding: 0.3rem 1rem;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-weight: 700;
+  background: none;
+  border: 1px solid #3c3a3a;
+  color: #3c3a3a;
+  cursor: default;
+
+  box-sizing: border-box;
+}
+.btn:hover {
+  background: #1e59f1;
+  color: #fff;
+  border: 1px solid #1e59f1;
+}
+
+#add-user,
+#edit-user {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  gap: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(50px);
+  padding: 1rem;
+}
+
+#edit-user,
+#add-user {
+  display: none;
+}
+
+input[type="text"],
+input[type="url"] {
+  width: max-content;
+  border: none;
+  margin: 0 5px;
+  padding: 0.3rem 1rem;
+  /* align-items: center; */
+  border-radius: 1rem;
+  background: none;
+  border: 1px solid #3c3a3a;
+  color: #3c3a3a;
+  font-weight: 600;
+  outline: none;
+}
+
+.forms {
+  padding: 2rem;
+}
